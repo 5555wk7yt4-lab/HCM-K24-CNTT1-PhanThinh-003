@@ -1,5 +1,6 @@
 package com.example.hcmk24cntt1_phanleduythinh_003.Controller;
 
+import com.example.hcmk24cntt1_phanleduythinh_003.Entity.Watch;
 import com.example.hcmk24cntt1_phanleduythinh_003.Service.WatchService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Slf4j
 @Controller
@@ -28,7 +30,7 @@ private final WatchService watchService;
     return ResponseEntity.ok(Wtch);
     }
     @PostMapping
-    public ResponseEntity<Watch>addWatch(){
-
+    public ResponseEntity<Watch>addWatch(@RequestBody Watch watch){
+        Watch watch1 = watchService.addWatch()
     }
 }
